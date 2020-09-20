@@ -1,7 +1,7 @@
 body {
   font-family: 'GothamPro';
   max-width: 1170px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .header {
@@ -246,11 +246,11 @@ body {
 }
 
 .box-video {
-  border: 1px solid green;
   display: flex;
   justify-content: space-space-around;
   width: 88%;
   background: #000;
+  margin-bottom: 76px;
 }
 
 .box-video__video {
@@ -301,4 +301,123 @@ body {
   height: 7px;
   transform: translateY(95%);
   color: white;
+}
+
+.stories {
+  width: 88%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 0 77px 0;
+}
+
+.stories__title {
+  width: 100%;
+  margin: 0 0 42px 0;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.review {
+  margin: 0;
+  max-width: 307px;
+}
+
+.review__title {
+  font-size: 18px;
+  margin: 26px 0 9px 0;
+}
+
+.review__text {
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0 0 16px 0;
+}
+
+.link-date {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.link-date__link {
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  font-weight: 900;
+  margin: 0;
+}
+
+.link-date__link::after {
+  content: '';
+  position: absolute;
+  background: url('icons/ArrowSmall.svg');
+  background-repeat: no-repeat;
+  margin-left: 8px;
+  width: 35px;
+  height: 8px;
+  transform: translateY(30%);
+  color: #000;
+}
+
+.link-date__date {
+  color: #000;
+  font-size: 12px;
+  opacity: .3;
+  margin: 0;
+}
+
+.photos {
+  width: 88%;
+  margin-bottom: 80px;
+}
+
+.photos__title {
+  font-size: 18px;
+  color: #000;
+  opacity: .3;
+  text-align: right;
+  margin-bottom: 8px;
+}
+
+.photos__image {
+  width: 147px;
+  height: 147px;
+  /* float: left; */
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #000;
+  padding: 66px 0 33px 100px;
+}
+
+.block {
+  width: 235px;
+  margin-bottom: 32px;
+}
+
+.block__title {
+  font-size: 12px;
+  margin: 0 0 8px 0;
+  color: #FFF;
+}
+
+.block__link {
+  display: block;
+  color: #FFF;
+  text-decoration: none;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.footer__title {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #FFF;
 }
