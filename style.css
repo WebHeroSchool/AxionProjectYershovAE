@@ -2,10 +2,12 @@ body {
   font-family: 'GothamPro';
   max-width: 1170px;
   margin: 0 auto;
+  padding: 0 70px;
+  box-sizing: border-box;
 }
 
 .header {
-  width: 88%;
+  width: 100%;
   min-height: 95px;
   display: flex;
   align-items: center;
@@ -131,7 +133,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  width: 88%;
+  width: 100%;
   margin: 9px 0 33px 0;
   height: 190px;
   padding: 91px 0 0 60px;
@@ -175,7 +177,7 @@ body {
 .product {
   display: flex;
   flex-wrap: wrap;
-  width: 88%;
+  width: 100%;
   justify-content: space-between;
   margin-bottom: 22px;
 }
@@ -277,7 +279,7 @@ body {
 .box-video {
   display: flex;
   justify-content: space-space-around;
-  width: 88%;
+  width: 100%;
   background: #000;
   margin-bottom: 76px;
 }
@@ -338,7 +340,7 @@ body {
 }
 
 .stories {
-  width: 88%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -409,7 +411,7 @@ body {
 }
 
 .photos {
-  width: 88%;
+  width: 100%;
   margin-bottom: 80px;
 }
 
@@ -439,14 +441,11 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   background: #000;
-  /* padding-top: 66px; */
-  padding: 66px 110px 0 0;
+  padding-top: 66px;
 }
 
 .block {
-  /* width: 200px; */
-  margin-left: 90px;
-  margin-bottom: 52px;
+  margin: 0 50px 52px 50px;
 }
 
 .block__title {
