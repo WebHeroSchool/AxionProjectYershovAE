@@ -6,6 +6,8 @@ body {
   box-sizing: border-box;
 }
 
+.main {border: dashed 1px green;}
+
 .header {
   width: 100%;
   min-height: 95px;
@@ -20,6 +22,7 @@ body {
 }
 
 .logo {
+  background: url('icons/Axion-logo-1.svg');
   margin-right: 45px;
   width: 55px;
   height: 55px;
@@ -52,7 +55,7 @@ body {
 }
 
 .search__text {
-  width: 174px;
+  max-width: 174px;
   border: 0;
   border-bottom: 1px solid;
   transform: translate(0, 3px);
@@ -110,12 +113,12 @@ body {
 }
 
 .authorization__sign-in-button {
-  width: 48px;
+  max-width: 48px;
 }
 
 .authorization__cart-button {
   margin-right: 53.87px;
-  width: 35px;
+  max-width: 35px;
 }
 
 .authorization__cart-button::after {
@@ -132,13 +135,12 @@ body {
 .box-image {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
   width: 100%;
   margin: 9px 0 33px 0;
-  height: 190px;
   padding: 91px 0 0 60px;
   background: url('icons/box-image.png');
   background-repeat: no-repeat;
+  box-sizing: border-box;
 }
 
 .box-image__title {
@@ -156,6 +158,7 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: #FFF;
+  margin-bottom: 75px;
   opacity: .5s;
 }
 
@@ -190,7 +193,7 @@ body {
 }
 
 .shoes {
-  width: 230px;
+  max-width: 230px;
   height: 261px;
 }
 
@@ -286,8 +289,6 @@ body {
 
 .box-video__video {
   border: 8px solid lightgrey;
-  max-width: 628px;
-  max-height: 345px;
   margin: 65px 42px 66px 32px;
 }
 
@@ -360,6 +361,10 @@ body {
   max-width: 307px;
 }
 
+.review__image {
+  width: 100%;
+}
+
 .review__title {
   font-size: 18px;
   margin: 26px 0 9px 0;
@@ -413,6 +418,7 @@ body {
 .photos {
   width: 100%;
   margin-bottom: 80px;
+  box-sizing: border-box;
 }
 
 .photos__title {
@@ -427,10 +433,12 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
+                                          border: 1px dashed red;
 }
 
 .photos__image {
   margin-right: -2px;
+  max-width: 147px;
 }
 
 .footer {
@@ -509,4 +517,143 @@ body {
   font-weight: 500;
   color: #FFF;
   margin:0 0 33px 0;
+}
+
+
+
+
+@media all and (max-width: 1169px) {
+
+  body {
+    padding: 0 41px;
+  }
+
+  .header {margin-bottom: 23px;}
+
+  .logo {
+    background: url('icons/Axionlogo1024.svg');
+    margin-right: 29px;
+    width: 61px;
+    height: 55px;
+  }
+
+  .search {
+    margin-right: 35px;
+  }
+
+  .search__text {
+    width: 160px;
+  }
+
+  .authorization__sign-in-button,
+  .authorization__cart-button,
+  .authorization__flag-button {
+    margin-right: 25px;
+  }
+
+  .authorization__cart-button {
+    margin-right: 53.87px;
+    width: 35px;
+  }
+
+  .authorization__flag-button {
+    margin-right: 0;
+  }
+
+  .box-image {
+    margin: 0 0 45px 0;
+    padding: 77px 0 0 53px;
+    background: url('icons/box-image1024.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .box-image__title {
+    margin: 0 0 10px 0;
+    max-width: 195px;
+  }
+
+  .box-image__link {margin-bottom: 67px;}
+
+  .box-image__link::after {
+    margin-left: 14px;
+  }
+
+  .shoes {
+    width: 208px;
+  }
+
+  .shoes__price {
+    margin-right: 75px;
+  }
+
+  .product {
+    margin-bottom: 50px;
+  }
+
+  iframe {
+    width: 563px;
+    height: 309px;
+  }
+
+  .box-video {
+    margin-bottom: 92px;
+  }
+
+  .box-video__video {
+    max-width: 563px;
+    max-height: 309px;
+    margin: 60px 38px 58px 30px;
+  }
+
+  .inform {
+    margin-top: 134px;
+  }
+
+  .inform__title {
+    margin-bottom: 9px;
+  }
+
+  .inform__text {
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 11px;
+    max-width: 254px;
+  }
+
+  .inform__link::after {
+    margin-left: 15px;
+  }
+
+  .stories {
+    margin-bottom: 88px;
+  }
+
+  .review {
+    max-width: 277px;
+  }
+
+  .review__image {
+    width: 100%;
+    height: 147px;
+  }
+
+  .review__text {
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0 0 22px 0;
+  }
+
+  .link-date__link::after {
+    margin-left: 0;
+  }
+
+  .photos__image {
+    max-width: 133px;
+    height: 133px;
+  }
+
+  .photos {
+    margin-bottom: 94px;
+  }
 }
