@@ -6,8 +6,6 @@ body {
   box-sizing: border-box;
 }
 
-.main {border: dashed 1px green;}
-
 .header {
   width: 100%;
   min-height: 95px;
@@ -22,11 +20,13 @@ body {
 }
 
 .logo {
-  background: url('icons/Axion-logo-1.svg');
+  background: url('icons/AxionLogo.svg');
   margin-right: 45px;
   width: 55px;
   height: 55px;
 }
+
+.logo-mobile {display: none;}
 
 .nav__link {
   font-size: 12px;
@@ -47,6 +47,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.menu-right-mobile {
+  display: none;
 }
 
 .search {
@@ -182,7 +186,7 @@ body {
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
-  margin-bottom: 22px;
+  margin-bottom: 50px;
 }
 
 .product__title {
@@ -192,15 +196,31 @@ body {
   font-size: 22px;
 }
 
+.product__separator {
+  width: 1px;
+  height: 100px;
+  background: lightgrey;
+  margin-top: 39px;
+}
+
 .shoes {
   max-width: 230px;
-  height: 261px;
+  /* height: 261px; */
 }
 
 .shoes__image {
   margin: 0 0 22px 23px;
-  max-width: 190px;
 }
+
+                                          .shoes__image-black {
+                                            height: 178px;
+                                            background: url('icons/shoesBlack.png') no-repeat;
+                                          }
+
+                                          .shoes__image-orange {
+                                            height: 178px;
+                                            background: url('icons/shoesOrange.png') no-repeat;
+                                          }
 
 .shoes__link {
   display: block;
@@ -433,7 +453,6 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-                                          border: 1px dashed red;
 }
 
 .photos__image {
@@ -531,7 +550,7 @@ body {
   .header {margin-bottom: 23px;}
 
   .logo {
-    background: url('icons/Axionlogo1024.svg');
+    background: url('icons/AxionLogo1024.svg');
     margin-right: 29px;
     width: 61px;
     height: 55px;
@@ -579,16 +598,23 @@ body {
     margin-left: 14px;
   }
 
-  .shoes {
-    width: 208px;
+  .product {
+    margin-bottom: 78px;
+  }
+
+  .shoes__image {
+    width: 100%;
+    margin-bottom: 3px;
+  }
+
+  .shoes__image-black,
+  .shoes__image-orange {
+    width: 100%;
+    height: 197px;
   }
 
   .shoes__price {
     margin-right: 75px;
-  }
-
-  .product {
-    margin-bottom: 50px;
   }
 
   iframe {
@@ -656,4 +682,228 @@ body {
   .photos {
     margin-bottom: 94px;
   }
+}
+
+
+
+
+@media all and (max-width: 1023px) {
+
+  body {
+    padding: 0;
+  }
+
+  .header {
+    margin: 0;
+    min-height: 117px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+    background: url('icons/AxionLogoTablet.svg');
+    margin: 0 0 0 43px;
+    width: 156px;
+    height: 34px;
+  }
+
+  .menu-right {display: none;}
+
+  .menu-right-mobile {
+    display: block;
+    width: 61px;
+    height: 9px;
+    background: #000;
+    margin-right: 44px;
+    transform: translateY(-65%)
+  }
+
+  .menu-right-mobile::after {
+    content: '';
+    position: absolute;
+    width: 61px;
+    height: 9px;
+    background: #000;
+    transform: translateY(150%);
+  }
+
+  .box-image {
+    margin: 0 0 37px 0;
+    padding: 117px 0 0 46px;
+    background: url('icons/box-imageTablet.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .box-image__title {
+    margin: 0 0 44px 0;
+    max-width: 350px;
+    font-size: 50px;
+    line-height: 48px;
+  }
+
+  .box-image__link {
+    margin-bottom: 82px;
+    font-size: 16px;
+  }
+
+  .box-image__link::after {
+    margin-left: 11px;
+    transform: translateY(10%);
+    background: url('icons/ArrowBig.svg');
+    background-repeat: no-repeat;
+    width: 75px;
+    height: 15px;
+  }
+
+  .product {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+
+  .product__title {font-size: 30px;}
+
+  .product__separator {display: none;}
+
+  .shoes-mobile {display: none;}
+
+  .shoes {
+    max-width: 350px;
+    margin: 0 0 0 75px;
+    border: 1px solid red;
+  }
+
+  .shoes__image-black,
+  .shoes__image-orange {
+    margin-bottom: 15px;
+    width: 280px;
+    height: 233px;
+  }
+
+  .shoes__image-black {
+    background: url('icons/shoesBlackTablet.png') no-repeat;
+  }
+
+  .shoes__image-orange {
+    background: url('icons/shoesOrangeTablet.png') no-repeat;
+  }
+
+  .shoes__link {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .shoes__price {
+    font-size: 25px;
+    margin-right: 72px;
+  }
+
+  .shoes__color {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+  }
+
+
+
+  iframe {
+    max-width: 755px;
+    max-height: 900px;
+  }
+
+
+  .box-video {
+    flex-direction: column-reverse;
+    margin: 0 0 220px 0;
+    padding: 52px 0 0 0;
+    position: relative;
+  }
+
+  .box-video::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    width: 0;
+    height: 0;
+    border-bottom: 50px solid #000;
+    border-right: 100vw solid #FFF;
+  }
+
+  .inform {
+    margin: 0;
+    padding: 0;
+  }
+
+  .inform__title {
+    text-align: center;
+    max-width: 100%;
+    font-size: 30px;
+    margin: 0 0 27px 0;
+    padding: 0;
+  }
+
+  .inform__text {
+    text-align: center;
+    margin: 0 0 37px 0;
+    padding: 0 50px 0 50px;
+    font-size: 20px;
+    line-height: 25px;
+    max-width: 100%;
+  }
+
+  .inform__link::after {
+    display: none;
+  }
+  .inform__link {
+    display: none;
+  }
+
+  .box-video__video {
+    max-width: 755px;
+    max-height: 900px;
+    padding: 0;
+    margin: 0 0 0 56px;
+    border: 10px solid lightgrey;
+  }
+
+  .stories {
+    margin 0;
+    background: #000;
+  }
+
+  .stories__title {
+    font-size: 30px;
+    color: #FFF;
+  }
+
+  /* .review {
+    max-width: 277px;
+  } */
+
+  /* .review__image {
+    width: 100%;
+    height: 147px;
+  } */
+
+  /* .review__text {
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0 0 22px 0;
+  } */
+
+  /* .link-date__link::after {
+    margin-left: 0;
+  } */
+
+  /* .photos__image {
+    max-width: 133px;
+    height: 133px;
+  } */
+
+  /* .photos {
+    margin-bottom: 94px;
+  } */
 }
