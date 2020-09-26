@@ -366,7 +366,7 @@ body {
   margin: 0 0 77px 0;
 }
 
-.rewiew-all {
+.review-all {
   display: flex;
   justify-content: space-between;
 }
@@ -462,6 +462,8 @@ body {
   margin-right: -2px;
   max-width: 147px;
 }
+
+.photos__image_tablet {display: none;}
 
 .footer {
   position: absolute;
@@ -689,7 +691,6 @@ body {
 
 
 
-
 @media all and (max-width: 1023px) {
 
   body {
@@ -727,7 +728,7 @@ body {
     height: 9px;
     background: #000;
     margin-right: 44px;
-    transform: translateY(-65%)
+    transform: translateY(-65%);
     opacity: .5s;
   }
 
@@ -768,8 +769,7 @@ body {
   .box-image__link::after {
     margin-left: 11px;
     transform: translateY(10%);
-    background: url('icons/ArrowBig.svg');
-    background-repeat: no-repeat;
+    background: url('icons/ArrowBig.svg') no-repeat;
     width: 75px;
     height: 15px;
   }
@@ -835,17 +835,6 @@ body {
     z-index: 2;
   }
 
-  .box-video::before {
-    /* content: '';
-    position: absolute;
-    top: -45px;
-    width: 0;
-    height: 0;
-    border-top: 1px solid #FFF;
-    border-bottom: 50px solid #000;
-    border-right: 100vw solid #FFF; */
-  }
-
   .inform {
     margin: 0;
     padding: 0;
@@ -902,18 +891,6 @@ body {
     z-index: 1;
   }
 
-  .stories::after {
-    /* content: '';
-    position: absolute;
-    display: block;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-top: 1px solid #FFF;
-    border-bottom: 50px solid #FFF;
-    border-right: 100vw solid #000; */
-  }
-
   .stories__title {
     font-size: 30px;
     color: #FFF;
@@ -921,7 +898,7 @@ body {
     transform: skewY(-2.5deg);
   }
 
-  .rewiew-all {
+  .review-all {
     justify-content: space-evenly;
   }
 
@@ -932,9 +909,9 @@ body {
     transform: skewY(-2.5deg);
   }
 
-                                          .rewiew-top {
-                                            margin-top: -22px;
-                                          }
+  .review-top {
+    margin-top: -22px;
+  }
 
   .review-tablet {display: none;}
 
@@ -977,13 +954,10 @@ body {
   }
 
   .photos {
-    margin: 0 auto;
     position: relative;
     top:-200px;
     z-index: 3;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    max-width: 670px;
+    margin-bottom: -85px
   }
 
   .photos__title {
@@ -993,10 +967,19 @@ body {
     margin-right: 45px;
   }
 
+  .photos__row {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
   .photos__image {
     max-width: 170px;
     height: 170px;
   }
+
+  .photos__image_tablet {display: block;}
 
   .footer {
     padding-top: 57px;
@@ -1024,4 +1007,258 @@ body {
   .social__link {
     margin: 0 15px 0 0;
   }
+}
+
+
+
+
+
+@media all and (max-width: 599px) {
+
+  body {
+    padding: 0;
+  }
+
+  .header {
+    margin: 0;
+    min-height: 71px;
+  }
+
+  .logo-mobile {
+    background: url('icons/AxionLogoMobile.svg');
+    width: 104px;
+    height: 22px;
+    margin-left: 48px;
+  }
+
+  .menu-right-mobile {
+    width: 41px;
+    height: 5px;
+    background: #000;
+    margin-right: 46px;
+    transform: translateY(-60%);
+  }
+
+  .menu-right-mobile::after {
+    width: 41px;
+    height: 5px;
+    transform: translateY(175%);
+  }
+
+  .box-image {
+    background: url('icons/box-imageMobile.png') no-repeat;
+    background-size: 100%;
+    margin: 0 0 0 0;
+    padding: 67px 0 0 50px;
+  }
+
+  .box-image__title {
+    margin: 0 0 17px 0;
+    max-width: 150px;
+    font-size: 20px;
+    line-height: 19px;
+  }
+
+  .box-image__link {
+    margin-bottom: 38px;
+    font-size: 12px;
+  }
+
+  .box-image__link::after {
+    background: url('icons/ArrowSmall.svg') no-repeat;
+    margin-left: 8px;
+    width: 46px;
+  }
+
+  .product {
+    margin-top: 35px;
+    margin-bottom: 80px;
+  }
+
+  .product__title {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .shoes-mobile {display: none;}
+
+  .shoes-all {
+    display: flex;
+    justify-content: center;
+  }
+
+  .shoes {
+    max-width: 281px;
+  }
+
+  .shoes__image-black {
+    margin-bottom: 12px;
+    width: 163px;
+    height: 165px;
+    background: url('icons/shoesBlackMobile.png') no-repeat;
+  }
+
+  .shoes__link {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .shoes__price {
+    font-size: 20px;
+    margin-right: 72px;
+  }
+
+  .shoes__color {
+    width: 15px;
+    height: 15px;
+    margin-right: 2px;
+  }
+
+  .inform__title {
+    max-width: 260px;
+    font-size: 20px;
+    margin: 0 auto;
+    margin-bottom: 13px;
+  }
+
+  .inform__text {
+    margin: 0 0 30px 0;
+    font-size: 14px;
+    line-height: 17px;
+    max-width: 262px;
+  }
+
+  .box-video {padding-top: 32px;}
+
+  .box-video__video {
+    max-width: 276px;
+    max-height: 152px;
+    border: 4px solid lightgrey;
+  }
+
+  iframe {
+    max-width: 276px;
+    max-height: 152px;
+  }
+
+  .stories {
+    padding: 100px 0 364px 0;
+  }
+
+  .review-top {display: none;}
+
+  .stories__title {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  .review {
+    max-width: 279px;
+  }
+
+  .review__image {
+    height: 148px;
+    margin: 0;
+  }
+
+  .review__title {
+    font-size: 20px;
+    line-height: 19px;
+  }
+
+  .review__text {
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 0 27px 0;
+  }
+
+  .link-date__link {
+    font-size: 12px;
+  }
+
+  .link-date__link::after {
+    margin-left: 11px;
+    background: url('icons/ArrowMobileWhite.svg') no-repeat;
+    width: 42px;
+    height: 13px;
+  }
+
+  .link-date__date {
+    font-size: 15px;
+  }
+
+  .photos {
+    top: -270px;
+    margin: 0 auto;
+    margin-bottom: -186px;
+    max-width: 300px;
+  }
+
+  .photos__title {
+    font-size: 25px;
+    text-align: center;
+    margin: 0 0 9px 0;
+  }
+
+  .photos__image_mobile,
+  .photos__image_tablet {
+    display: none;
+  }
+
+  .photos__image {
+    max-width: 140px;
+    height: 140px;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding-top: 34px;
+    margin: 0 auto;
+  }
+
+  .block {
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .blok_mobile-1 {order: -3;}
+
+  .blok_mobile-2 {
+    order: -1;
+    margin-bottom: 41px;}
+
+  .blok_mobile-3 {
+    order: -2;
+    margin-bottom: 30px;
+   }
+
+  .blok_mobile-4 {order: 0;}
+
+
+  .block__title,
+  .block__link {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .block__title {margin-bottom: 5px;}
+
+  .block__link_discount {
+    margin-bottom: 27px;
+    width: 168px;
+  }
+
+  .block__button {
+    padding: 12px 54px;
+    margin-left: 12px;
+  }
+
+  .social {margin-top: 113px;}
+
+  .social__link {margin: 0 23px 0 6px;}
+
+  .social__link:last-child {margin-right: 0px;}
+
+  .footer__title {margin-top: -19px;}
+
 }
