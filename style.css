@@ -546,6 +546,7 @@ body {
 
 
 
+
 @media all and (max-width: 1169px) {
 
   body {
@@ -688,6 +689,8 @@ body {
     margin-bottom: 94px;
   }
 }
+
+
 
 
 
@@ -1210,6 +1213,14 @@ body {
     height: 140px;
   }
 
+  .photos__image_mobile-3 {order: 4;}
+
+  .photos__image_mobile-5 {order: 3;}
+
+  .photos__image_mobile-6 {order: 1;}
+
+  .photos__image_mobile-7 {order: 2;}
+
   .footer {
     flex-direction: column;
     padding-top: 34px;
@@ -1233,7 +1244,6 @@ body {
    }
 
   .blok_mobile-4 {order: 0;}
-
 
   .block__title,
   .block__link {
