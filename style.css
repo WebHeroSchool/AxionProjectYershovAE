@@ -418,7 +418,7 @@ body {
 .link-date__link::after {
   content: '';
   position: absolute;
-  background: url('icons/ArrowSmall.svg');
+  background: url('icons/ArrowSmallBlack.svg');
   background-repeat: no-repeat;
   margin-left: 8px;
   width: 35px;
@@ -1012,6 +1012,19 @@ body {
   }
 }
 
+
+
+
+@media (max-width: 670px) {
+    .box-video__video {
+        max-width: 560px;
+    }
+
+    iframe {
+      max-width: 560px;
+      max-height: 374px;
+    }
+}
 
 
 
